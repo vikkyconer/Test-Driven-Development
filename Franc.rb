@@ -1,4 +1,6 @@
-class Franc
+require './Money'
+
+class Franc < Money
 
 	attr_reader :amount
 
@@ -6,17 +8,17 @@ class Franc
 		@amount = amount
 	end
 
-	def times(multiplier)
-		Dollar.new(@amount * multiplier)
-	end
+	# def times(multiplier)
+	# 	Dollar.new(@amount * multiplier)
+	# end
 
-	def equals(object)
-		object.amount == @amount
-	end
+	# def equals(money)
+	# 	money.amount == @amount
+	# end
 
-	def not_equals(object)
-		object.amount != @amount
-	end
+	# def not_equals(object)
+	# 	object.amount != @amount
+	# end
 
 	private 
 	
